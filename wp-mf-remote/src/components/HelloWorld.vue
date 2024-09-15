@@ -44,7 +44,7 @@ const testimonials = ref([
 
 <template>
   <div class="testimonials-grid">
-    <h1>Remote 2</h1>
+    <h1>Remote 3</h1>
     <div
       v-for="(testimonial, index) in testimonials"
       :key="index"

@@ -23,8 +23,8 @@ module.exports = (env = {}) => ({
   entry: "./src/main.ts",
   output: {
     publicPath,
-    chunkFilename: "gf_form_app.[chunkhash].js",
-    uniqueName: "gf_form_app",
+    chunkFilename: "mf_remote_app.[chunkhash].js", // replace mf_remote_app your desired app's name - just a identifier prefix
+    uniqueName: "mf_remote_app",
   },
   resolve: {
     extensions: [".ts", ".vue", ".jsx", ".js", ".json"],
@@ -45,10 +45,11 @@ module.exports = (env = {}) => ({
     new ModuleFederationPlugin({
       name: "remoteApp",
       filename: "remoteEntry.js",
-      library: { type: "var", name: "gfFormApp" },
+      library: { type: "var", name: "remoteApp" },
       exposes: {
         "./Content": "./src/App.vue",
       },
+      shared: ["vue", "css"],
     }),
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "./index.html"),
