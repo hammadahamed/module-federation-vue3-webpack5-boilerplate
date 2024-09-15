@@ -1,0 +1,11 @@
+wp-mf-host/node_modules/
+wp-mf-host/dist/
+wp-mf-host/build/
+wp-mf-host/yarn.lock
+
+wp-mf-remote/node_modules/
+wp-mf-remote/dist/
+wp-mf-remote/build/
+wp-mf-remote/pnpm-lock.yaml
+
+.DS_Store
