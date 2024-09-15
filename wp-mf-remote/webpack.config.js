@@ -7,7 +7,7 @@ const webpack = require("webpack");
 
 const publicPath = (() => {
   if (process.env.NODE_ENV === "production") {
-    return "https://appcdn.leadconnectorhq.com/leadgen/SocialPlanner/";
+    return "https://<hosting-url>";
   }
 
   return "http://localhost:3003/";
@@ -43,7 +43,7 @@ module.exports = (env = {}) => ({
       filename: "[name].css",
     }),
     new ModuleFederationPlugin({
-      name: "gfFormApp",
+      name: "remoteApp",
       filename: "remoteEntry.js",
       library: { type: "var", name: "gfFormApp" },
       exposes: {

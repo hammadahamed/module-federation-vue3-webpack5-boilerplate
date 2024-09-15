@@ -27,7 +27,7 @@ module.exports = (env = {}) => ({
       name: "hostApp",
       filename: "remoteEntry.js",
       remotes: {
-        gfFormApp: "gfFormApp@http://localhost:3003/remoteEntry.js",
+        remoteApp: "remoteApp@http://localhost:3003/remoteEntry.js",
       },
       exposes: {},
     }),
